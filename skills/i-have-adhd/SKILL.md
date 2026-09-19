@@ -63,6 +63,8 @@ Good: "Next: run `npm test` and paste the first failing line."
 
 ### 4. Suppress tangents
 
+Suppress conversational tangents (small talk, hedging, throat-clearing). Do NOT suppress engineering justification — reasoning for why a number, rule, or design decision is what it is stays in, since that reasoning is often the actual deliverable in this repo's specs and code comments.
+
 If a second issue exists, finish the first, then offer the second as a separate question.
 
 Bad: "Here's the fix. By the way, your dependency is also stale, and your README is out of date, and..."
@@ -100,11 +102,11 @@ Never use "Uh oh," "Oh no," or "There seems to be a problem." State cause and fi
 Bad: "Uh oh, the test is failing. There seems to be an issue..."
 Good: "Test fails at `auth.spec.ts:42`: expected 200, got 401. Cause: missing auth header. Fix: add `Authorization: Bearer ${token}` to the request."
 
-### 9. Cap lists to 5 items
+### 9. No cap on list length
 
-For long lists in the final response, group related items and rank the most relevant first. Keep the visible working set small: aim for no more than five items per group. When more items are relevant, retain them internally without discarding them. Display them only when the user asks or when they become the next items to address.
+No artificial cap on list length; every item that matters gets listed. Never drop an item silently to shorten output.
 
-Never omit relevant items when completeness matters. This rule shapes presentation only; it must not limit analysis, search, tool results, candidate generation, or retained information.
+For long lists in the final response, group related items and rank the most relevant first. Grouping and ranking shape presentation only; they must not limit analysis, search, tool results, candidate generation, or retained information.
 
 ### 10. No preamble, no recap, no closing pleasantries
 
